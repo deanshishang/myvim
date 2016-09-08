@@ -55,3 +55,26 @@ syntax on
 
 ""不使用vi的键盘模式
 set nocompatible
+
+""
+"nmap <C-H> <C-W>h "control+h进入左边的窗口
+"nmap <C-J> <C-W>j  "control+j进入下边的窗口
+"nmap <C-K> <C-W>k "control+k进入上边的窗口
+"nmap <C-L> <C-W>l  "control+l进入右边的窗口
+
+
+"" NERDTree map a special key or shortcut to open NERDTree
+map <F7> :NERDTreeToggle<CR>
+"" 自动打开NERDTree
+"autocmd vimenter * NERDTree
+" 当没有指定文件的时候，自动打开NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+
+"Powerline
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'compatible'

@@ -18,7 +18,7 @@ highlight StatusLineNC guifg=Gray guibg=White
 
 
 ""命令行高度显示
-set cmdheight=3
+set cmdheight=2
 
 
 ""搜索时候输入的句子逐个字符亮
@@ -56,7 +56,7 @@ syntax on
 ""不使用vi的键盘模式
 set nocompatible
 
-""
+""备注待用
 "nmap <C-H> <C-W>h "control+h进入左边的窗口
 "nmap <C-J> <C-W>j  "control+j进入下边的窗口
 "nmap <C-K> <C-W>k "control+k进入上边的窗口
@@ -78,3 +78,18 @@ set nocompatible
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_symbols = 'compatible'
+
+
+
+""侦测文件类型
+filetype on
+""载入文件类型插件
+filetype plugin indent on
+
+
+""Taglist
+map <F8> :TlistToggle<cr>
+
+
+""跳转到下一个缓冲区
+map <tab> :bn<cr>
